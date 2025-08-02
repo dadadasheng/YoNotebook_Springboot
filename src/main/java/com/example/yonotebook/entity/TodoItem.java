@@ -9,12 +9,12 @@ import java.util.Date;
 @Entity
 public class TodoItem {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     private String todoText;
     private int status;
     private int bookId;
-    private Date create_time;
+    private Date createTime;
 
     public int getId() {
         return id;
@@ -48,11 +48,11 @@ public class TodoItem {
         this.bookId = bookId;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getcreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setcreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
